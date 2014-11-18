@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tuanpmpd01037.duan1"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="11" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/dict"
+        android:label="Từ vựng theo chủ đề"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="tuanpmpd01037.main.MainActivity"
+            android:label="Từ vựng theo chủ đề" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="tuanpmpd01037.main.TuVungActivity"
+            android:label="Danh sách chủ đề" >
+        </activity>
+        <activity
+            android:name="tuanpmpd01037.main.DetailTuVungActivity"
+            android:label="Từ vựng " >
+        </activity>
+        <activity
+            android:name="tuanpmpd01037.main.AddWordActivity"
+            android:label="Thêm từ" >
+        </activity>
+        <activity
+            android:name="tuanpmpd01037.main.ListActivity"
+            android:label="Danh sách từ" >
+        </activity>
+        <activity
+            android:name="tuanpmpd01037.main.SearchWordActivity"
+            android:label="Tìm kiếm" >
+        </activity>
+    </application>
+
+</manifest>

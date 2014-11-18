@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFCC33"
+    tools:context="${relativePackage}.${activityClass}" >
+<ImageButton
+        android:id="@+id/imageTuVung"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/tuvung" />
+
+    <ImageButton
+        android:id="@+id/imageDanhSach"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/imageTuVung"
+        android:layout_marginRight="40dp"
+        android:src="@drawable/danhsach" />
+
+    <ImageButton
+        android:id="@+id/imageThemTu"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/imageDanhSach"
+        android:layout_alignTop="@+id/imageTimKiem"
+        android:src="@drawable/themtu" />
+
+    <ImageButton
+        android:id="@+id/imageTimKiem"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/imageTuVung"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:src="@drawable/timkiem" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_alignLeft="@+id/imageTuVung"
+        android:layout_below="@+id/imageTuVung"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:text="Từ vựng" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignLeft="@+id/imageDanhSach"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:text="Danh sách"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageTimKiem"
+        android:layout_below="@+id/imageThemTu"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Tìm kiếm"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignLeft="@+id/imageThemTu"
+         android:gravity="center"
+        android:text="Thêm từ"
+        android:textSize="20dp"
+        android:textStyle="bold"
+         />
+
+</RelativeLayout>

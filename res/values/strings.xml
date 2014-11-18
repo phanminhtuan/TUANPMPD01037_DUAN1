@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Duan1</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_tu_vung">TuVungActivity</string>
+    <string name="title_activity_detail_tu_vung">DetailTuVungActivity</string>
+    <string name="title_activity_add_word">AddWordActivity</string>
+    <string name="title_activity_list">ListActivity</string>
+    <string name="title_activity_search_word">SearchWordActivity</string>
+
+</resources>
