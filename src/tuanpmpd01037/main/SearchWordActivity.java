@@ -3,6 +3,7 @@ package tuanpmpd01037.main;
 import java.util.ArrayList;
 import java.util.List;
 
+import tuanpmpd01037.custom.xml.CustomSearchWord;
 import tuanpmpd01037.database.DatabaseHandler;
 import tuanpmpd01037.duan1.R;
 import tuanpmpd01037.object.Word;
@@ -21,9 +22,9 @@ import android.widget.Toast;
 
 public class SearchWordActivity extends Activity {
 	EditText txtTimTu;
-	ImageView imgSearch;
+	ImageView imgSearch,imgXoa;
 	ListView listview;
-	ArrayAdapter<Word> adapterSearch;
+	CustomSearchWord adapterSearch;
 	List<Word> listSearch = new ArrayList<Word>();
 	DatabaseHandler db = new DatabaseHandler(SearchWordActivity.this);
 	int textlength = 0;
@@ -34,19 +35,37 @@ public class SearchWordActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_search_word);
 		imgSearch = (ImageView) findViewById(R.id.imgSearch);
+		imgXoa=(ImageView)findViewById(R.id.imageXoa);
 		txtTimTu = (EditText) findViewById(R.id.txtTimTu);
 		listview = (ListView) findViewById(R.id.listView);
 		listSearch = db.getAllContacts();
+		Log.d("Danh sách từ", ""+listSearch);
 		// ==============================tim
 		imgSearch.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				onTextChanged();
-				
 
+				if (txtTimTu.getText().toString().equals("")) {
+					Toast.makeText(getApplicationContext(), "Nhập từ cần tìm",
+							Toast.LENGTH_LONG).show();
+				} else {
+					onTextChanged();
+					adapterSearch = new CustomSearchWord(SearchWordActivity.this, listSort);
+					listview.setAdapter(adapterSearch);
+				}
+				
 			}
 
+		});
+		//===========================xoa
+		imgXoa.setOnClickListener(new OnClickListener(
+				) {
+			
+			@Override
+			public void onClick(View v) {
+				txtTimTu.setText("");
+			}
 		});
 	}
 
@@ -63,14 +82,15 @@ public class SearchWordActivity extends Activity {
 								(String) _text.subSequence(0, textlength))) {
 					Log.i("array sort", _text);
 					listSort.add(listSearch.get(i));
-					adapterSearch = new ArrayAdapter<Word>(SearchWordActivity.this,
-							android.R.layout.simple_list_item_1, listSort);
-					listview.setAdapter(adapterSearch);
-				}else{
-					Toast.makeText(getApplicationContext(), "The word doesn't exited in the dictionary", Toast.LENGTH_LONG).show();
+
+				} else {
+					Toast.makeText(getApplicationContext(),
+							"Từ này không có trong từ điển",
+							Toast.LENGTH_LONG).show();
 				}
+				
 			}
-		}
-		
+}
+
 	}
 }

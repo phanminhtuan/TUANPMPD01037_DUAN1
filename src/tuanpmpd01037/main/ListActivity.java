@@ -46,9 +46,9 @@ public class ListActivity extends Activity {
 						final	int position, long id) {
 						AlertDialog.Builder b = new AlertDialog.Builder(
 								ListActivity.this);
-						b.setTitle("Delete Word ");
-						b.setMessage("Do you want to delete this word?");
-						b.setPositiveButton("Yes",
+						b.setTitle("Xóa từ ");
+						b.setMessage("Bạn muốn xóa từ này không?");
+						b.setPositiveButton("Có",
 								new DialogInterface.OnClickListener() {
 									@Override
 									public void onClick(DialogInterface dialog,
@@ -60,7 +60,7 @@ public class ListActivity extends Activity {
 										mylist.setAdapter(adapterList);
 									}
 								});
-						b.setNegativeButton("No",
+						b.setNegativeButton("Không",
 								new DialogInterface.OnClickListener() {
 
 									@Override

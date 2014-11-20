@@ -42,15 +42,15 @@ List<Word> listWord = new ArrayList<Word>();
 				if ((txtTu.getText().toString().equals(""))
 						|| (txtNghiaTu.getText().toString().equals(""))) {
 					Toast.makeText(getApplicationContext(),
-							"Please enter your word ", Toast.LENGTH_LONG)
+							"Vui lòng nhập lại từ ", Toast.LENGTH_LONG)
 							.show();
 					return;
 				} else {
 					AlertDialog.Builder b = new AlertDialog.Builder(
 							AddWordActivity.this);
-					b.setTitle("Save Word ");
-					b.setMessage("Do you want to save this word?");
-					b.setPositiveButton("Yes",
+					b.setTitle("Lưu từ ");
+					b.setMessage("Bạn muốn lưu từ này không?");
+					b.setPositiveButton("Có",
 							new DialogInterface.OnClickListener() {
 								@Override
 								public void onClick(DialogInterface dialog,
@@ -60,13 +60,13 @@ List<Word> listWord = new ArrayList<Word>();
 									db.addContact(new Word(txtTu.getText().toString(),
 											txtNghiaTu.getText().toString()));
 									Log.d("==============", "" + db.getAllContacts());
-									Toast.makeText(getApplicationContext(), "Successfull",
+									Toast.makeText(getApplicationContext(), "Lưu thành công",
 											Toast.LENGTH_LONG).show();
 									txtNghiaTu.setText("");
 									txtTu.setText("");
 								}
 							});
-					b.setNegativeButton("No",
+					b.setNegativeButton("Không",
 							new DialogInterface.OnClickListener() {
 
 								@Override

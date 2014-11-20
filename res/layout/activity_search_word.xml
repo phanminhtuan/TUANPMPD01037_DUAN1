@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    
+     android:background="#FAFAD2"
     tools:context="${relativePackage}.${activityClass}" >
 
     <EditText
@@ -12,16 +12,18 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_toLeftOf="@+id/imgSearch"
-        android:inputType="text"
+        android:ems="10"
         android:hint="Nhập từ cần tìm"
-        android:ems="10" />
+        android:inputType="text"
+        android:textColorHint="#8B795E" />
 
     <ImageView
         android:id="@+id/imgSearch"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:layout_alignBottom="@+id/txtTimTu"
         android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
         android:src="@drawable/search" />
 
     <ListView
@@ -30,7 +32,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/txtTimTu" >
-
     </ListView>
+
+    <ImageView
+        android:id="@+id/imageXoa"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/txtTimTu"
+        android:visibility="gone"
+        android:src="@drawable/xoa" />
 
 </RelativeLayout>
