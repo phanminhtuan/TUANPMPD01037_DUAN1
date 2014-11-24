@@ -150,5 +150,37 @@ public class TuVungActivity extends Activity {
 				cd_30.setImage(R.drawable.thue);
 				cd_30.setListTuVung(list_31);
 				listChuDe.add(cd_30);
+				//=========================================================
+				List<TuVung> list_29 = new ArrayList<TuVung>();
+				list_29.add(new TuVung("Shoe","(n)","Giày","He always wears a red pair of shoes when he goes to shool","Anh ta luôn mang một đôi giày đỏ đi học"));
+				list_29.add(new TuVung("Scarf","(n)","Khăn quàng cổ","Women also wear scarves over their shoulders or hair","Phụ nữ thường quàng khăn lên vai hoặc tóc của họ"));
+				list_29.add(new TuVung("Comfortable","(adj)","dễ chịu,thoải mái","These new shoes are not very comfortable","Những chiếc giày mới này chả dễ chịu tí nào"));
+				list_29.add(new TuVung("Pocket","(n)","túi","I put the pen in my pocket","Tôi để cái bút  trong túi"));
+				list_29.add(new TuVung("Second-hand","(adj)","cũ,đã dùng rồi","I bought it in a second-hand bookshop","Tôi mua nó ở hiệu sách cũ"));
+				list_29.add(new TuVung("Paint","(n)","quần tây","He wants to find a new pair of pants","Anh ấy muốn tìm mua một đôi quần mới"));
+				list_29.add(new TuVung("Expensive","(adj)","đắt tiền","I can't afford it.it's too expensive","Tôi không thể mua được vì nó quá đắt"));
+				list_29.add(new TuVung("Wear","(v)","mang,đeo,mặc","Was she wearing a seat belt?","Cô ấy đang thắt dây an toàn phải không?"));
+				list_29.add(new TuVung("Ring","(n)","nhẫn,đai,vòng","My mother wears a gold ring on her finger","Mẹ tôi đeo một chiếc nhẫn trên ngón tay"));
+				list_29.add(new TuVung("Tight","(adj)","chật,khít","She twisted her hair into a tight knot","Cô xoắn tóc cô vào môt cái nút chặt chẽ"));
+				list_29.add(new TuVung("Sock","(n)","tất,vớ","He has bought a pair of socks","Anh ta mới mua một đôi tất"));
+				list_29.add(new TuVung("Boot","(n)","Ủng,giày cao cổ","She always likes a pair of black leather boots","Cô ấy luôn thích một đôi giày cao cổ bằng da màu đen"));
+				list_29.add(new TuVung("Button","(n)","cái nút,khuy áo","I picked up a shirt buttons on the way to school","Trên đường đi học,tôi nhặt được một cái cúc"));
+				list_29.add(new TuVung("Sew","(v)","may,khâu","My mother taught me how to sew","Mẹ tôi dạy tôi cách khâu vá"));
+				ChuDe cd_29 = new ChuDe();
+				cd_29.setIdChude("Clothing – Quần áo");
+				cd_29.setImage(R.drawable.quanao);
+				cd_29.setListTuVung(list_29);
+				listChuDe.add(cd_29);
+				//================================================
+				List<TuVung> list_28 = new ArrayList<TuVung>();
+				list_28.add(new TuVung("Win ","(v)","chiến thắng","If we win this game we will be the semifinal champions","Nếu chúng ta thắng trận này chúng ta sẽ vào bán kết"));
+				list_28.add(new TuVung("Finish","(v/n)","Kết thúc","The cyclist was too tired to make it to the finish line","Vận động viên đua xe đạp quá mệt để cán đích"));
+				list_28.add(new TuVung("Fast","(v)","nhanh","The swimmer was so fast that he finished the race in record time","Vận động viên bơi lội đã nhanh đến mức đạt đích ở mức kỷ lục"));
+				list_28.add(new TuVung("Cheer","(v)","cổ vũ","The crowd cheered when the home team got the last goal","Khán giả đã reo hò khi đội nhà giành được bàn thắng cuối cùng"));
+				ChuDe cd_28 = new ChuDe();
+				cd_28.setIdChude("Sports – Thể thao");
+				cd_28.setImage(R.drawable.thethao);
+				cd_28.setListTuVung(list_28);
+				listChuDe.add(cd_28);
 	}
 }

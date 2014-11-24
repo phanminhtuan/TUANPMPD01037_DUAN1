@@ -37,7 +37,7 @@
         android:layout_height="100dp"
         android:layout_alignLeft="@+id/imageTuVung"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="80dp"
         android:src="@drawable/timkiem" />
 
     <TextView
@@ -87,5 +87,28 @@
         android:textSize="20dp"
         android:textStyle="bold"
          />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageDanhSach"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#CDB38B"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView3"
+        android:background="#66CDAA"
+        android:orientation="vertical" >
+
+    </LinearLayout>
 
 </RelativeLayout>
